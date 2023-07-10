@@ -11,6 +11,8 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link href="https://fonts.cdnfonts.com/css/leontyne-signature" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+
 	<link rel="stylesheet" href="assets/css/main.css" />
 	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -26,18 +28,16 @@
 		<!-- Header -->
 		<header id="header" class="alt">
 			<h1 id="logo">Les Véronique</h1>
-			<nav id="nav" class="nav left-sidebar">
+			<nav id="nav" class="nav">
 				<ul>
 					<li class="current"><a href="index.html">Home</a></li>
-					<li class="current"><a href="index.html">About</a></li>
 					<li class="current"><a >Works</a>
 						<ul>
-							<li><a href="#main">Vlog</a></li>
 							<li><a href="#">Blog</a></li>
+							<li><a href="#main">Vlog</a></li>
 						</ul>
 					</li>
-					<li class="current"><a href="index.html">Contact</a></li>
-					
+					<li class="current"><a href="index.html">About</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -51,20 +51,31 @@
 						automatically wrap lines, so be sure to use line breaks where
 						appropriate (<br />).
 					-->
+			<div class="social-links">
+				<a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a>
+				<a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a>
+				<a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a>
+				<a href="#" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a>
+				<a href="#" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a>
+			</div>
 			<div class="inner">
 
 				<header>
-					<h2>Les Veroniqu</h2>
+					<center>					
+						<div class="image-container">
+							<img src="./images/wht.png">
+							<img src="./images/blck.png">
+							<img src="./images/pstl.png">
+						</div>
+					</center>
 				</header>
-				<p>Creating Captivating 
-					<br />
-					Visual Stories 
-					<br />
-					that Leave a Lasting Impression.
-				</p>
+				<p><span>Big.</span><span> Bright.</span><span> Beautiful.</span></p>
+				<br>
+				<br>
 				<footer>
 					<ul class="buttons stacked">
-						<li><a href="##" class="button fit scrolly">Tell Me More</a></li>
+						<li><a href="about" class="button fit scrolly">More About Me</a></li>
+						<li><a href="#" class="button fit scrolly">Contact Me</a></li>
 					</ul>
 				</footer>
 
@@ -433,8 +444,8 @@
 				<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
 				<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
 				<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
-				<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a></li>
 			</ul>
 
 			<ul class="copyright">
@@ -528,6 +539,22 @@
       });
 
         </script>
+
+		
+<script>
+	// JavaScript code to alternate the images
+	window.addEventListener('load', function () {
+		var images = document.querySelectorAll('.image-container img');
+		var index = 0;
+
+		setInterval(function () {
+			images[index].style.opacity = '0';
+			index = (index + 1) % images.length;
+			images[index].style.opacity = '1';
+		}, 2000); // Change the interval time (in milliseconds) as per your requirement
+	});
+</script>
+
 
 </body>
 
