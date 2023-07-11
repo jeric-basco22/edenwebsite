@@ -25,7 +25,7 @@ section, summary, time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: Lato, sans-serif;
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
@@ -132,7 +132,6 @@ input, select, textarea {
 
 	h1, h2, h3, h4, h5, h6 {
 		color: inherit;
-		font-weight: 300;
 		line-height: 1.75em;
 		margin-bottom: 1em;
 		/* text-transform: uppercase; */
@@ -143,10 +142,11 @@ input, select, textarea {
 			text-decoration: none;
 			border: 0;
 		}
-
+		
 	h2 {
+
 		font-size: 1.5em;
-		letter-spacing: 0.1em;
+		letter-spacing: 0.5em;
 	}
 
 	h3 {
@@ -1988,17 +1988,20 @@ input, select, textarea {
 					background: linear-gradient(120DEG, #3B5998, #bccbf7);
 					color: #fff;
 				}
-
-			.icon.circle.fa-google-plus-g {
-				background: transparent;
-				color: #b982b0;
-			}
-
-				.icon.circle.fa-google-plus-g:hover {
-					background: linear-gradient(120DEG, #4285F4, #34A853, #FBBC05, #EA4335,#f8dfdfdc);
-					color: #fff;
+				.icon.brand{
+					background: transparent;
+					color: #b982b0;
+					font-family: Lato, sans-serif;
+					text-align: center;
+					text-decoration-line: none;
+				    font-display: none;
+					border-style: none;
+					padding: 20px;
 				}
-
+				  
+				  .icon.brand:hover {
+					color: #fff;
+				  }
 			.icon.circle.fa-instagram {
 				background: transparent;
 				color: #b982b0;
@@ -2234,12 +2237,11 @@ input, select, textarea {
 			font-size: 11.5px;
 			text-decoration: none;
 			font-family: Lato, sans-serif;
-		
 			}
 
 		a.button.fit.scrolly:hover{
-			background: radial-gradient(circle at 30% 107%, #ebb9f0, #f197fd 5%, #ff9cefd2 45%,#ee98e7d3 70%,#ebb9f0 90%);
-			color: white;
+		background: radial-gradient(circle at 30% 107%, #ebb9f0, #f197fd 5%, #ff9cefd2 45%,#ee98e7d3 70%,#ebb9f0 90%);
+		color: white;
 		font-size: 11.5px;
 		text-decoration: none;
 		}
@@ -2357,7 +2359,7 @@ input, select, textarea {
 	#header {
 		
 		padding-top: 30px;
-		background: #ffffff07;
+		background: #fffffff3;
 		box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.075);
 		color: inherit;
 		cursor: default;
@@ -2460,13 +2462,14 @@ input, select, textarea {
 						box-shadow:  2px 2px 5px #000;
 					}
 
-					#header nav ul ul li a:h{
+					#header nav ul ul li a:hover{
 								background: radial-gradient(circle at 30% 107%, #f197fd 5%, #fd97e3 0%, #d478aece 45%,#db7fb8b2 70%,#fd97e3 90%);
 					}
 					#header nav ul li.current > a {
 						font-size: 12px;
 						font-family: Lato, sans-serif;
 						border-radius: 5px;
+						border-color: #ffffff2d;
 						background: transparent;
 					}
 
@@ -2732,7 +2735,7 @@ input, select, textarea {
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
 		background-color: #645862;
-		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("../../images/17.png");
+		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("../../images/19.png");
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -2741,8 +2744,18 @@ input, select, textarea {
 		text-align: center;
 	}
 
-		#cta header {
+		#cta header{
+			
 			margin-bottom: 2em;
+		} 
+
+		#cta p.con {
+			font-size: 24px;
+			font-family: Lato, sans-serif;
+			color: #333;
+			margin-bottom: 10px;
+			text-transform: uppercase;
+			letter-spacing: 1em;
 		}
 
 /* Footer */
@@ -2808,6 +2821,8 @@ input, select, textarea {
 			}
 
 			h1, h2, h3, h4, h5, h6 {
+				color: #000;
+				font-family: Lato, sans-serif;
 				line-height: 1.5em;
 			}
 
@@ -3452,3 +3467,92 @@ input, select, textarea {
     width: 70%;
     margin: 100px;
   }
+
+/* Subscribe Youtube */
+  #subscribe {
+	background-color: #f9f9f9;
+	padding: 50px 0;
+	text-align: center;
+  }
+  
+  #subscribe h2 {
+	font-size: 20px;
+	font-family: Lato, sans-serif;
+	margin-bottom: 20px;
+	color: #333;
+  }
+  
+  #subscribe p {
+	font-size: 14px;
+	font-family: Lato, sans-serif;
+	color: #666;
+	margin-bottom: 30px;
+  }
+  
+  #subscribe form {
+	width: 500px;
+	display: inline-block;
+	flex-direction: column;
+	align-items: center;
+  }
+  
+  #subscribe input[type="email"] {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 14px;
+	margin-bottom: 10px;
+  }
+  
+  #subscribe button {
+	padding: 10px 20px;
+	background:hsla(0, 0%, 84%, 0.37);
+	color: #000000;
+	border-color:#f8caf4;
+	border-radius: 10px;
+	font-size: 14px;
+	cursor: pointer;
+  }
+  
+  #subscribe button:hover {
+	font-family: Lato, sans-serif;
+	box-shadow: #000;
+	background: radial-gradient(circle at 30% 107%, #f197fd 5%, #fd97e3 0%, #fd49b2 45%,#eb28a0 70%,#fd97e3 90%);
+	border-color:#f8caf4d6;
+	border-radius: 10px;
+	color: white;
+  }
+ 
+  
+/* Media Query for Mobile Devices */
+@media (min-width: 435px) {
+	#subscribe h2 {
+	  font-size: 24px;
+	}
+  
+	#subscribe p {
+	  font-size: 14px;
+	}
+  
+	#subscribe input[type="email"] {
+	  font-size: 12px;
+	}
+  
+	#subscribe button {
+	  font-size: 14px;
+	}
+  }
+
+   /* Additional CSS styles */
+   .carousel-item {
+	display: block;
+	margin: 0 auto;
+	max-height: 100%;
+	width: auto;}
+.carousel-item img {
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+}
+
+  

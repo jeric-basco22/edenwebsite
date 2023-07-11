@@ -1,127 +1,120 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-
+<!DOCTYPE html>
 <head>
-	<title>Contact - Twenty by HTML5 UP</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript>
-		<link rel="stylesheet" href="assets/css/noscript.css" />
-	</noscript>
+<meta charset="utf-8">
+<title>Contact form submission</title>
 </head>
+<body>
 
-<body class="contact is-preload">
-	<div id="page-wrapper">
 
-		<!-- Header -->
-		<header id="header">
-			<h1 id="logo"><a href="index.html">Twenty <span>by HTML5 UP</span></a></h1>
-			<nav id="nav">
-				<ul>
-					<li class="current"><a href="index.html">Welcome</a></li>
-					<li class="submenu">
-						<a href="#">Layouts</a>
-						<ul>
-							<li><a href="left-sidebar.html">Left Sidebar</a></li>
-							<li><a href="right-sidebar.html">Right Sidebar</a></li>
-							<li><a href="no-sidebar.html">No Sidebar</a></li>
-							<li><a href="contact.html">Contact</a></li>
-							<li class="submenu">
-								<a href="#">Submenu</a>
-								<ul>
-									<li><a href="#">Dolore Sed</a></li>
-									<li><a href="#">Consequat</a></li>
-									<li><a href="#">Lorem Magna</a></li>
-									<li><a href="#">Sed Magna</a></li>
-									<li><a href="#">Ipsum Nisl</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li><a href="#" class="button primary">Sign Up</a></li>
-				</ul>
-			</nav>
-		</header>
+<?php
 
-		<!-- Main -->
-		<article id="main">
+$errors = [];
+$errorMessage = '';
 
-			<header class="special container">
-				<span class="icon solid fa-envelope"></span>
-				<h2>Get In Touch</h2>
-				<p>Use the form below to give /dev/null a piece of your mind.</p>
-			</header>
+if (!empty($_POST)) {
+   $name = $_POST['name'];
+   $email = $_POST['email'];
+   $message = $_POST['message'];
 
-			<!-- One -->
-			<section class="wrapper style4 special container medium">
+   if (empty($name)) {
+       $errors[] = 'Name is empty';
+   }
 
-				<!-- Content -->
-				<div class="content">
-					<form>
-						<div class="row gtr-50">
-							<div class="col-6 col-12-mobile">
-								<input type="text" name="name" placeholder="Name" />
-							</div>
-							<div class="col-6 col-12-mobile">
-								<input type="text" name="email" placeholder="Email" />
-							</div>
-							<div class="col-12">
-								<input type="text" name="subject" placeholder="Subject" />
-							</div>
-							<div class="col-12">
-								<textarea name="message" placeholder="Message" rows="7"></textarea>
-							</div>
-							<div class="col-12">
-								<ul class="buttons">
-									<li><input type="submit" class="special" value="Send Message" /></li>
-								</ul>
-							</div>
-						</div>
-					</form>
-				</div>
+   if (empty($email)) {
+       $errors[] = 'Email is empty';
+   } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+       $errors[] = 'Email is invalid';
+   }
 
-			</section>
+   if (empty($message)) {
+       $errors[] = 'Message is empty';
+   }
 
-		</article>
+   if (empty($errors)) {
+       $toEmail = 'example@example.com';
+       $emailSubject = 'New email from your contact form';
+       $headers = ['From' => $email, 'Reply-To' => $email, 'Content-type' => 'text/html; charset=utf-8'];
+       $bodyParagraphs = ["Name: {$name}", "Email: {$email}", "Message:", $message];
+       $body = join(PHP_EOL, $bodyParagraphs);
 
-		<!-- Footer -->
-		<footer id="footer">
+       if (mail($toEmail, $emailSubject, $body, $headers)) {
 
-			<ul class="icons">
-				<li><a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a></li>
-				<li><a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a></li>
-				<li><a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a></li>
-				<li><a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a></li>
-			</ul>
+           header('Location: thank-you.html');
+       } else {
+           $errorMessage = 'Oops, something went wrong. Please try again later';
+       }
 
-			<ul class="copyright">
-				<li>&copy; Untitled</li>
-				<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-				<li>Distributed By: <a href="https://themewagon.com/">Themewagon</a></li>
-			</ul>
+   } else {
 
-		</footer>
+       $allErrors = join('<br/>', $errors);
+       $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
+   }
+}
 
-	</div>
+?>
+<html>
+<body>
+ <form  method="post" id="contact-form">
+   <h2>Contact us</h2>
+   <?php echo((!empty($errorMessage)) ? $errorMessage : '') ?>
+   <p>
+     <label>First Name:</label>
+     <input name="name" type="text"/>
+   </p>
+   <p>
+     <label>Email Address:</label>
+     <input style="cursor: pointer;" name="email" type="text"/>
+   </p>
+   <p>
+     <label>Message:</label>
+     <textarea name="message"></textarea>
+   </p>
+   <p>
 
-	<!-- Scripts -->
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.dropotron.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/jquery.scrollgress.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+     <input type="submit" value="Send"/>
+   </p>
+ </form>
 
+ <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.13.1/validate.min.js"></script>
+ <script>
+
+
+     const constraints = {
+         name: {
+             presence: { allowEmpty: false }
+         },
+         email: {
+             presence: { allowEmpty: false },
+             email: true
+         },
+         message: {
+             presence: { allowEmpty: false }
+         }
+     };
+
+     const form = document.getElementById('contact-form');
+     form.addEventListener('submit', function (event) {
+
+         const formValues = {
+             name: form.elements.name.value,
+             email: form.elements.email.value,
+             message: form.elements.message.value
+         };
+
+
+         const errors = validate(formValues, constraints);
+         if (errors) {
+             event.preventDefault();
+             const errorMessage = Object
+                 .values(errors)
+                 .map(function (fieldValues) {
+                     return fieldValues.join(', ')
+                 })
+                 .join("\n");
+
+             alert(errorMessage);
+         }
+     }, false);
+ </script>
 </body>
-
 </html>
