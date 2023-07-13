@@ -15,9 +15,9 @@
 
 	<link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -35,11 +35,13 @@
 					<li class="current"><a href="index.html">Home</a></li>
 					<li class="current"><a >Works</a>
 						<ul>
-							<li><a href="#">Blog</a></li>
+							<li><a href="#blog">Blog</a></li>
 							<li><a href="#main">Vlog</a></li>
+							<li><a href="#pod">Podcast</a></li>
 						</ul>
 					</li>
-					<li class="current"><a href="index.html">About</a></li>
+					<li class="current"><a href="#about">About</a></li>
+					<li class="current"><a href="#cta">Contact</a></li>
 				</ul>
 			</nav>
 		</header>
@@ -71,8 +73,8 @@
 
 				<footer>
 					<ul class="buttons stacked">
-						<li><a href="about" class="button fit scrolly">More About Me</a></li>
-						<li><a href="#" class="button fit scrolly">Need to Reach Me?</a></li>
+						<li><a href="no-sidebar.html" class="button fit scrolly">More About Me</a></li>
+						<li><a href="#cta" class="button fit scrolly">Need to Reach Me?</a></li>
 					</ul>
 				</footer>
 			</div>
@@ -127,205 +129,260 @@
 			
 		<!-- Main -->
 		<article id="main">
-			 <div class="container">
-				<br>
-					 <div class="row">
-						<div class="col-md-7">
-							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive-item" id="video-player" src="" allow="accelerometer; autoplay=false; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<section id="vlog">
+				<header class="special container">
+					<!-- <span class="icon solid fa-chart-bar"></span> -->
+					<i class="icon solid fa-video"></i>
+				</header>
+				<div class="container">
+					<br>
+						<div class="row">
+							<div class="col-md-7">
+								<div class="embed-responsive embed-responsive-16by9">
+									<iframe class="embed-responsive-item" id="video-player" src="" allow="accelerometer; autoplay=false; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+								</div>
+							</div>
+							<div class="col-sm-5">
+								<div class="section-title">
+									<center><h4>Top Views</h4></center>
+								</div>
+								<ul id="playlist" class="list-group" style="max-height: 320px; overflow-y: scroll;">
+									<li class="list-group-item" data-video="7R89VNX5HE0">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 1 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>							  
+									<li class="list-group-item" data-video="YpGjaJ1ettI">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 2 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="9ptTreDIXW8">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 3 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="7R89VNX5HE0">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 4 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="YpGjaJ1ettI">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 5 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="9ptTreDIXW8">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 6 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="7R89VNX5HE0">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 7 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="YpGjaJ1ettI">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 8 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="9ptTreDIXW8">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 9 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="7R89VNX5HE0">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 10 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="YpGjaJ1ettI">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 11 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="9ptTreDIXW8">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 12 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="7R89VNX5HE0">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 13 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+									<li class="list-group-item" data-video="YpGjaJ1ettI">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 14 Title</h5>
+													<p>Video 1 Description</p>
+												</div>	
+											</div>
+									</li>
+									<li class="list-group-item" data-video="9ptTreDIXW8">
+											<div class="row">
+												<div class="col-md-6">
+													<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
+												</div>
+												<div class="col-md-6">
+													<h5 class="mt-0">Video 15 Title</h5>
+													<p>Video 1 Description</p>
+												</div>
+											</div>
+									</li>
+								<br>
+								<center><button id="view-more-btn" class="btn btn-default mt-2" href="#"  target="_blank">View More</button></center>
+								<!-- Add more videos here -->
+								</ul>
+							</div>
+					</div>
+					
+					<div id="subscribe">
+						<div class="container">
+						<h2>Subscribe to My YouTube Channel</h2>
+						<p>Stay updated with the latest videos and content.</p>
+								<a href="https://www.youtube.com/channel/UCJKTfjho_xzCza6JbKFpsqQ?sub_confirmation=1" target="_blank">Subscribe</a>
+						</div>
+					</div>
+				</div> 
+			</section>
+		 	<br>
+		 	<br>
+	</div>
+	  
+	<section id="blog">
+		<header class="special container">
+			<span class="icon solid fa-pen"></span>
+		</header>
+			<div class="gjs-row" id="iuuk">
+				<div class="gjs-cell" id="irl2">
+				  <div class="gjs-row" id="ial7">
+						<div class="gjs-cell" id="ir9k">
+						<img id="ic7es" src="images/1.png"/>
+						<div class="gjs-row" id="ia86v">
+							<div class="gjs-cell" id="iffhh">
+							<img id="iqdl7" src="images/1.png">
+							</div>
+							<div class="gjs-cell" id="icvn8">
+							</div>
+							<div class="gjs-cell" id="i6aen">
 							</div>
 						</div>
-					    <div class="col-sm-5">
-							 <div class="section-title">
-								<h4>Top Views</h4>
-							 </div>
-							 <ul id="playlist" class="list-group" style="max-height: 320px; overflow-y: scroll;">
-								 <li class="list-group-item" data-video="7R89VNX5HE0">
-										 <div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 1 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										 </div>
-								 </li>							  
-								<li class="list-group-item" data-video="YpGjaJ1ettI">
-										 <div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 2 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										 </div>
-								</li>
-								<li class="list-group-item" data-video="9ptTreDIXW8">
-										 <div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-										 	</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 3 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="7R89VNX5HE0">
-										 <div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-										 	<div class="col-md-6">
-												<h5 class="mt-0">Video 4 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="YpGjaJ1ettI">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 5 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="9ptTreDIXW8">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 6 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="7R89VNX5HE0">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 7 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="YpGjaJ1ettI">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 8 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="9ptTreDIXW8">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 9 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="7R89VNX5HE0">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 10 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="YpGjaJ1ettI">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 11 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="9ptTreDIXW8">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 12 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="7R89VNX5HE0">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 13 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-								<li class="list-group-item" data-video="YpGjaJ1ettI">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 14 Title</h5>
-												<p>Video 1 Description</p>
-											</div>	
-										</div>
-								</li>
-								<li class="list-group-item" data-video="9ptTreDIXW8">
-										<div class="row">
-											<div class="col-md-6">
-												<img src="assets/css/images/thumbnail1.jpg" style="height: 120px; width: 200px;" class="mr-3" alt="">
-											</div>
-											<div class="col-md-6">
-												<h5 class="mt-0">Video 15 Title</h5>
-												<p>Video 1 Description</p>
-											</div>
-										</div>
-								</li>
-							<br>
-							<center><button id="view-more-btn" class="btn btn-default mt-2" href="#">View More</button></center>
-							<!-- Add more videos here -->
-							</ul>
 						</div>
+					<div class="gjs-cell" id="ism5">
+						<div class="gjs-cell" id="ir9k2">
+						<img id="ic7es" src="images/1.png"/>
+						<div class="gjs-row" id="ia86v">
+							<div class="gjs-cell" id="iffhh">
+							<img id="iqdl7" src="images/1.png">
+							</div>
+							<div class="gjs-cell" id="icvn8">
+							</div>
+							<div class="gjs-cell" id="i6aen">
+							</div>
+						</div>
+						</div>
+					</div>
+					<div class="gjs-cell" id="id8l">
+						<div class="gjs-cell" id="ir9k3">
+						<img id="ic7es" src="images/1.png"/>
+						<div class="gjs-row" id="ia86v">
+							<div class="gjs-cell" id="iffhh">
+							<img id="iqdl7" src="images/1.png">
+							</div>
+							<div class="gjs-cell" id="icvn8">
+							</div>
+							<div class="gjs-cell" id="i6aen">
+							</div>
+						</div>
+						</div>
+					</div>
+				  </div>
 				</div>
-				
-			<section id="subscribe">
-				<div class="container">
-				  <h2>Subscribe to My YouTube Channel</h2>
-				  <p>Stay updated with the latest videos and content.</p>
-				  <form action="https://www.youtube.com/channel/UCJKTfjho_xzCza6JbKFpsqQ" target="_blank">
-						<input type="email" name="email" placeholder="Enter your email" required><br>
-						<button type="submit">Subscribe</button>
-				  </form>
-				</div>
-			  </section>
-			</div> 
-		 <br>
-		</div>
-	  
+			  </div>
+		</section>
 			<header class="special container">
 				<span class="icon solid fa-chart-bar"></span>
 					<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
@@ -498,7 +555,7 @@
 			<header>
 				<p class="con">CONTACT</p>
 			</header>
-			<form method="post" action="send_email.php">
+			<form method="post" action="palwanicole.palwa">
 				<label for="subject">Subject:</label><br>
 				<input type="text" id="subject" name="subject" required><br><br>
 		
@@ -510,13 +567,7 @@
 		
 				<input type="submit" value="Submit">
 			</form>
-			<footer>
-				<ul class="buttons">
-					<li><a href="#" class="button primary">Take My Money</a></li>
-					<li><a href="#" class="button">LOL Wut</a></li>
-				</ul>
-
-			</footer>
+			<br>
 
 			<div class="social-links">
 				<a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a>
@@ -535,7 +586,7 @@
 		<!-- Footer -->
 		<footer id="footer">
 			<ul class="copyright">
-				<li><p class="m-0">All Rights Reserved &copy; <span class="tm-current-year">2022</span>.</p></li>
+				<li><p class="m-0">All Rights Reserved &copy; <span class="tm-current-year">2023</span>.</p></li>
 			</ul>
 
 		</footer>
@@ -579,7 +630,6 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
