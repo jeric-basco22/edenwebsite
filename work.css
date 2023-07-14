@@ -1,0 +1,171 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
+@import url('https://fonts.cdnfonts.com/css/leontyne-signature');
+
+
+.navbar-brand h1 {
+    font-family: 'Leontyne Signature', sans-serif;
+    margin: 0;
+    font-size: 5rem;
+    letter-spacing: 8px;
+}
+
+body {
+    padding-top: 50px;
+    
+}
+.navbar {
+    margin-bottom: 20px;
+}
+.jumbotron {
+    text-align: center;
+}
+.blog-post {
+    margin-bottom: 30px;
+}
+.blog-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+.blog-date {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.blog-content {
+    font-size: 16px;
+}
+.blog-image {
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+.footer {
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+.content_videos h1 {
+    font-family: sans-serif;
+    font-size: 3rem;
+    letter-spacing: 8px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.content_blog h1{
+    font-family: sans-serif;
+    font-size: 3rem;
+    letter-spacing: 8px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.blog-post .blog-content{
+    text-align: justify;
+}
+
+/* Container */
+
+.container {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 1400px;  
+}
+
+    .container.medium {
+        width: 1050px;
+    }
+
+    @media screen and (max-width: 1680px) {
+
+        .container {
+            width: 1200px;
+        }
+
+            .container.medium {
+                width: 900px;
+            }
+
+    }
+
+    @media screen and (max-width: 1280px) {
+
+        .container {
+            width: 960px;
+        }
+
+            .container.medium {
+                width: 735px;
+            }
+
+    }
+
+    @media screen and (max-width: 980px) {
+
+        .container {
+            width: 95%;
+        }
+
+            .container.medium {
+                width: 71.25%;
+            }
+
+    }
+
+    @media screen and (max-width: 840px) {
+
+        .container {
+            width: 95%;
+        }
+
+            .container.medium {
+                width: 95%;
+            }
+
+    }   
+
+    @media screen and (max-width: 736px) {
+
+        .container {
+            width: 100%;
+        }
+
+            .container.medium {
+                width: 100%;
+            }
+
+    }
+
+    @media screen and (min-width: 300px) {
+
+         .col-md-7{
+            width: 100%;
+        }
+
+            .col-md-7.embed-responsive {
+                width: 100%;
+            }
+
+    }
+    @media screen and (min-width: 767px) {
+
+        .col-md-6{
+           width: 100%;
+       }
+
+           .col-md-6.embed-responsive {
+               width: 100%;
+           }
+
+   }
+
+    @media screen and (max-width: 300px) {
+
+        .col-sm-5{
+           width: 100%;
+       }
+
+   }

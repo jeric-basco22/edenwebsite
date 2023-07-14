@@ -2400,6 +2400,8 @@ input, select, textarea {
 			text-shadow: 2px 2px 5px #000000a1;
 			text-decoration: none;
 		}
+
+		
 /* 
 		#header h1:hover {
 			font-family: Lucida Handwriting;
@@ -2423,6 +2425,7 @@ input, select, textarea {
 
 			}
 
+		  
 		#header nav {
 			padding-top: 10px;
 			letter-spacing: 0.075em;
@@ -2431,19 +2434,24 @@ input, select, textarea {
 			/* text-transform: uppercase; */
 			top: 0.75em;
 		}
-
+		
 			#header nav ul {
 				list-style: none;
 				padding-left: 0;
+<<<<<<< Updated upstream
 				border-radius: 10px;
+=======
+				margin: 0 10px;
+>>>>>>> Stashed changes
 			}
+
 
 				#header nav ul li {
 					display: inline-block;
 					margin-left: 1.5em;
 					padding-left: 0;
 				}
-
+			
 					#header nav ul li > ul {
 						display: none;
 					}
@@ -2457,6 +2465,7 @@ input, select, textarea {
 						text-decoration: none;
 					}
 
+					
 					#header nav ul li input[type="button"],
 					#header nav ul li input[type="submit"],
 					#header nav ul li input[type="reset"],
@@ -2757,8 +2766,13 @@ input, select, textarea {
 
 	#cta {
 		background-attachment: scroll, scroll, scroll, fixed;
+<<<<<<< Updated upstream
 		background-color: #645862;
 		background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("../../images/19.png");
+=======
+		background-color: #fffdff;
+		/*background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/banner.jpg");*/
+>>>>>>> Stashed changes
 		background-position: top left, top right, top left, bottom center;
 		background-repeat: no-repeat, no-repeat, repeat, no-repeat;
 		background-size: 25em, 25em, auto, cover;
@@ -3573,7 +3587,7 @@ input, select, textarea {
 	width: 100%;
 }
 
-* {
+/* * {
 	box-sizing: border-box;
   }
 
@@ -3596,32 +3610,42 @@ input, select, textarea {
 	margin-left: 120px;
 	margin-right: 120px;
 	height:428px;
+	align-items: center;
+	justify-content: center;
+	
   }
   #ir9k{
 	width: 200px;
 	border-radius:5px 5px 5px 5px;
 	border:1px solid black;
-	margin:0px 40px 0px 0px;
+	margin-right: 40px;
 	flex-basis:20%;
   }
+
   #ir9k2{
-	height: 408px;
+	width: 200px;
 	border-radius:5px 5px 5px 5px;
 	border:1px solid black;
-	margin:0px 0px 0px 0px;
+	margin:auto;
 	flex-basis:20%;
   }
+
   #ir9k3{
-	height: 408px;
+	width: 200px;
 	border-radius:5px 5px 5px 5px;
 	border:1px solid black;
-	margin:0px 0px 40px 0px;
+	
 	flex-basis:20%;
   }
+  
   #ism5{
+	
 	flex-basis:20%;
   }
   #id8l{
+	margin-left: 120px;
+	margin-right: 120px;
+	height:428px;
 	flex-basis:20%;
 	margin:0px 0px 0px 40px;
   }
@@ -3651,13 +3675,14 @@ input, select, textarea {
 	#blog{
 	  flex-wrap:wrap;
 	  /* display: flex; */
-	}
+	/* }
   } 
   
   /* Add CSS for mobile view */
-@media screen and (max-width: 435px) {
+/* @media screen and (max-width: 435px) {
 	.gjs-row {
 	  display: inline;
+	  
 	}
   
 	.gjs-cell {
@@ -3673,26 +3698,178 @@ input, select, textarea {
   }
 
   @media screen and (max-width: 435px) {
+	.gjs-row {
+		display: inline;
+		margin: 20px 20px 20px 20px;
+	  }
 	#ir9k{
-		width: 400;
+		width: 100%;
 		align-items:center ;
 		justify-content: center;
 		align-content: center;
 	}
-	
-  
 	#ir9k2{
-		width: 400;
+		width: 100%;
+		align-items:center ;
+		justify-content: center;
+		align-content: center;
+	}
+	#ir9k3{
+		width: 100%;
 		align-items:center ;
 		justify-content: center;
 		align-content: center;
 	}
 	
-	#ir9k3{
-		width: 400;
+  }
+  @media screen and (max-width: 648px) {
+	.gjs-row {
+		display: inline;
+		margin: 20px 20px 20px 20px;
+	  }
+	#ir9k{
+		width: 90%;
 		align-items:center ;
 		justify-content: center;
 		align-content: center;
 	}
+	
+  } */
+   
+
+  .blog_content{
+	width: 90%;
+	height: auto;
+	background: transparent;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: auto;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 2%;
+	padding-left: 2%;
   }
+  
+  :root {
+	--bs-blue: #0d6efd;
+	--bs-indigo: #6610f2;
+	--bs-purple: #6f42c1;
+	--bs-pink: #d63384;
+	--bs-red: #dc3545;
+	--bs-orange: #fd7e14;
+	--bs-yellow: #ffc107;
+	--bs-green: #198754;
+	--bs-teal: #20c997;
+	--bs-cyan: #0dcaf0;
+	--bs-white: #fff;
+	--bs-gray: #6c757d;
+	--bs-gray-dark: #343a40;
+	--bs-gray-100: #f8f9fa;
+	--bs-gray-200: #e9ecef;
+	--bs-gray-300: #dee2e6;
+	--bs-gray-400: #ced4da;
+	--bs-gray-500: #adb5bd;
+	--bs-gray-600: #6c757d;
+	--bs-gray-700: #495057;
+	--bs-gray-800: #343a40;
+	--bs-gray-900: #212529;
+	--bs-primary: #0d6efd;
+	--bs-secondary: #6c757d;
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+	--bs-primary-rgb: 13,110,253;
+	--bs-secondary-rgb: 108,117,125;
+	--bs-success-rgb: 25,135,84;
+	--bs-info-rgb: 13,202,240;
+	--bs-warning-rgb: 255,193,7;
+	--bs-danger-rgb: 220,53,69;
+	--bs-light-rgb: 248,249,250;
+	--bs-dark-rgb: 33,37,41;
+	--bs-white-rgb: 255,255,255;
+	--bs-black-rgb: 0,0,0;
+	--bs-body-rgb: 33,37,41;
+	--bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	--bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+	--bs-gradient: linear-gradient(180deg, rgb(220, 194, 194), rgba(213, 160, 160, 0.91));
+	--bs-body-font-family: var(--bs-font-sans-serif);
+	--bs-body-font-size: 1rem;
+	--bs-body-font-weight: 400;
+	--bs-body-line-height: 1.5;
+	--bs-body-color: #daacac;
+	--bs-body-bg: #fff;
+  }
+  
+  article .blog_post {
+	margin: 0;
+	font-family: var(--bs-body-font-family);
+	font-size: var(--bs-body-font-size);
+	font-weight: var(--bs-body-font-weight);
+	line-height: var(--bs-body-line-height);
+	color: var(--bs-body-color);
+	text-align: var(--bs-body-text-align);
+	background-color: var(--bs-body-bg);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+  .float-start {
+	float: left!important;
+  }
+  
+  .custom-box {
+	width: 350px;
+	height: 450px;
+	background: transparent;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-style: none;
+	border-color: var(--bs-red);
+	border: 1px solid rgb(248, 247, 247);
+	box-shadow: 0px 0px 9px 3px rgb(83,87,92);
+  }
+  
+  .custom-box-top {
+	height: 50%;
+	width: 98%;
+	background: transparent;
+	margin-top: 1%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  .custom-box-bottom {
+	height: 45%;
+	width: 98%;
+	background: transparent;
+	margin-top: 3%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  .custom-box-left {
+	width: 25%;
+	height: 100%;
+	color: var(--bs-pink);
+	background: transparent;
+	margin: auto;
+	
+  }
+  
+  .custom-box-right {
+	width: 70%;
+	height: 100%;
+	color: var(--bs-pink);
+	background: transparent;
+	margin: auto;
+
+  }
+  
   
