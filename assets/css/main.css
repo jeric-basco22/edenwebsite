@@ -2377,11 +2377,13 @@ input, select, textarea {
 		cursor: default;
 		font-size: 0.8em;
 		left: 0;
-		padding: 1em 1.5em;
+		padding: 2.5em 1.5em 0.8em 2em;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 10000;
+		margin: 0px 0px 10px 0px;
+		border-radius: 0px 0px 10px 10px;
 	}
 
 		#header h1 {
@@ -2394,7 +2396,8 @@ input, select, textarea {
 
 		#header h1.logo {
 			font-family: 'Leontyne Signature', sans-serif;
-			margin: 0;
+			padding: 1em 0em 2em 1em;
+			margin: 2px 0px 10px 2px;
 			font-size: 2em;
 			letter-spacing: 8px;
 			text-shadow: 2px 2px 5px #000000a1;
@@ -2481,6 +2484,7 @@ input, select, textarea {
 						background: transparent;
 						border-color: #ffd1f0;
 						box-shadow:  2px 2px 5px #000;
+						color: #000;
 					}
 
 					#header nav ul ul li a:hover{
@@ -3496,8 +3500,17 @@ input, select, textarea {
 	}
 	.carousel-inner > .item > img,
   .carousel-inner > .item > a > img {
-    width: 70%;
+    width: 80%;
     margin: 100px;
+	margin-left: auto;
+	margin-right: auto;
+  }
+
+  #carousel, #mycarousel {
+	width: cover;
+	height: auto;
+	text-align: center;
+	padding: auto;
   }
 
 /* Subscribe Youtube */
@@ -3561,138 +3574,138 @@ input, select, textarea {
 	}
   }
 
-   /* Additional CSS styles */
-   .carousel-item {
-	display: block;
-	margin: 0 auto;
-	max-height: 100%;
-	width: auto;}
-.carousel-item img {
-	object-fit: cover;
+  
+  /* blog section */
+  section #blog {
+	width: 90%;
+	height: auto;
+	background: var(--bs-pink);
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 7px;
+	margin-bottom: 7px;
+	padding: auto;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-right: 2%;
+	padding-left: 2%;
+  }
+  
+  :root {
+	--bs-blue: #0d6efd;
+	--bs-indigo: #6610f2;
+	--bs-purple: #6f42c1;
+	--bs-pink: #d63384;
+	--bs-red: #dc3545;
+	--bs-orange: #fd7e14;
+	--bs-yellow: #ffc107;
+	--bs-green: #198754;
+	--bs-teal: #20c997;
+	--bs-cyan: #0dcaf0;
+	--bs-white: #fff;
+	--bs-gray: #6c757d;
+	--bs-gray-dark: #343a40;
+	--bs-gray-100: #f8f9fa;
+	--bs-gray-200: #e9ecef;
+	--bs-gray-300: #dee2e6;
+	--bs-gray-400: #ced4da;
+	--bs-gray-500: #adb5bd;
+	--bs-gray-600: #6c757d;
+	--bs-gray-700: #495057;
+	--bs-gray-800: #343a40;
+	--bs-gray-900: #212529;
+	--bs-primary: #0d6efd;
+	--bs-secondary: #6c757d;
+	--bs-success: #198754;
+	--bs-info: #0dcaf0;
+	--bs-warning: #ffc107;
+	--bs-danger: #dc3545;
+	--bs-light: #f8f9fa;
+	--bs-dark: #212529;
+	--bs-primary-rgb: 13,110,253;
+	--bs-secondary-rgb: 108,117,125;
+	--bs-success-rgb: 25,135,84;
+	--bs-info-rgb: 13,202,240;
+	--bs-warning-rgb: 255,193,7;
+	--bs-danger-rgb: 220,53,69;
+	--bs-light-rgb: 248,249,250;
+	--bs-dark-rgb: 33,37,41;
+	--bs-white-rgb: 255,255,255;
+	--bs-black-rgb: 0,0,0;
+	--bs-body-rgb: 33,37,41;
+	--bs-font-sans-serif: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+	--bs-font-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+	--bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+	--bs-body-font-family: var(--bs-font-sans-serif);
+	--bs-body-font-size: 1rem;
+	--bs-body-font-weight: 400;
+	--bs-body-line-height: 1.5;
+	--bs-body-color: #212529;
+	--bs-body-bg: #fff;
+  }
+  
+  .body {
+	margin: 0;
+	font-family: var(--bs-body-font-family);
+	font-size: var(--bs-body-font-size);
+	font-weight: var(--bs-body-font-weight);
+	line-height: var(--bs-body-line-height);
+	color: var(--bs-body-color);
+	text-align: var(--bs-body-text-align);
+	background-color: var(--bs-body-bg);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+  }
+  
+  .float-start {
+	float: left!important;
+  }
+  
+  .custom-box {
+	width: 350px;
+	height: 450px;
+	background: var(--bs-blue);
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	border-style: none;
+	border-color: var(--bs-red);
+	box-shadow: 0px 0px 9px 3px rgb(83,87,92);
+  }
+  
+  .custom-box-top {
+	height: 50%;
+	width: 98%;
+	background: var(--bs-purple);
+	margin-top: 1%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  .custom-box-bottom {
+	height: 45%;
+	width: 98%;
+	background: var(--bs-purple);
+	margin-top: 3%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  
+  .custom-box-left {
+	width: 25%;
 	height: 100%;
-	width: 100%;
-}
-
-* {
-	box-sizing: border-box;
-  }
-
-  .gjs-row{
-	display:flex;
-	justify-content:flex-start;
-	align-items:stretch;
-	flex-wrap:nowrap;
-	padding:10px;
-  }
-  .gjs-cell{
-	min-height:75px;
-	flex-grow:1;
-	flex-basis:100%;
-  }
-  #iuuk{
-	height:718px;
-  }
-  #ial7{
-	margin-left: 120px;
-	margin-right: 120px;
-	height:428px;
-  }
-  #ir9k{
-	width: 200px;
-	border-radius:5px 5px 5px 5px;
-	border:1px solid black;
-	margin:0px 40px 0px 0px;
-	flex-basis:20%;
-  }
-  #ir9k2{
-	height: 408px;
-	border-radius:5px 5px 5px 5px;
-	border:1px solid black;
-	margin:0px 0px 0px 0px;
-	flex-basis:20%;
-  }
-  #ir9k3{
-	height: 408px;
-	border-radius:5px 5px 5px 5px;
-	border:1px solid black;
-	margin:0px 0px 40px 0px;
-	flex-basis:20%;
-  }
-  #ism5{
-	flex-basis:20%;
-  }
-  #id8l{
-	flex-basis:20%;
-	margin:0px 0px 0px 40px;
-  }
-  #ic7es{
-	color:black;
-	width:100%;
-	height:200px;
-  }
-  #icvn8{
-	flex-basis:94%;
-  }
-  #iffhh{
-	flex-basis:50%;
-  }
-  #i6aen{
-	flex-basis:30%;
-  }
-  #iqdl7{
-	color:black;
-	border-radius:50px 50px 50px 50px;
-	width:65px;
-	height:65px;
-	text-align:center;
-	margin:10px 0px 0px 15%;
-  }
-  @media (min-width: 435px){
-	#blog{
-	  flex-wrap:wrap;
-	  /* display: flex; */
-	}
-  } 
-  
-  /* Add CSS for mobile view */
-@media screen and (max-width: 435px) {
-	.gjs-row {
-	  display: inline;
-	}
-  
-	.gjs-cell {
-	  width: 100%;
-	  padding: 0;
-	  margin-bottom: 20px;
-	}
-	
-	.gjs-cell img {
-	  max-width: 100%;
-	  height: auto;
-	}
-  }
-
-  @media screen and (max-width: 435px) {
-	#ir9k{
-		width: 400;
-		align-items:center ;
-		justify-content: center;
-		align-content: center;
-	}
-	
-  
-	#ir9k2{
-		width: 400;
-		align-items:center ;
-		justify-content: center;
-		align-content: center;
-	}
-	
-	#ir9k3{
-		width: 400;
-		align-items:center ;
-		justify-content: center;
-		align-content: center;
-	}
+	color: var(--bs-pink);
+	background: var(--bs-red);
+	margin-left: auto;
+	margin-right: auto;
   }
   
+  .custom-box-right {
+	width: 70%;
+	height: 100%;
+	color: var(--bs-pink);
+	background: var(--bs-red);
+	margin-left: auto;
+	margin-right: auto;
+  }

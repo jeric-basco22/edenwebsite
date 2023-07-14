@@ -17,10 +17,40 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+	
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+		
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
+
+	<!-- contact form  -->
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('https://dashboard.emailjs.com/admin/service_s26lmav');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+
 </head>
 
 <body class="index is-preload">
@@ -332,58 +362,9 @@
 		 	<br>
 	</div>
 	  
-	<section id="blog">
-		<header class="special container">
-			<span class="icon solid fa-pen"></span>
-		</header>
-			<div class="gjs-row" id="iuuk">
-				<div class="gjs-cell" id="irl2">
-				  <div class="gjs-row" id="ial7">
-						<div class="gjs-cell" id="ir9k">
-						<img id="ic7es" src="images/1.png"/>
-						<div class="gjs-row" id="ia86v">
-							<div class="gjs-cell" id="iffhh">
-							<img id="iqdl7" src="images/1.png">
-							</div>
-							<div class="gjs-cell" id="icvn8">
-							</div>
-							<div class="gjs-cell" id="i6aen">
-							</div>
-						</div>
-						</div>
-					<div class="gjs-cell" id="ism5">
-						<div class="gjs-cell" id="ir9k2">
-						<img id="ic7es" src="images/1.png"/>
-						<div class="gjs-row" id="ia86v">
-							<div class="gjs-cell" id="iffhh">
-							<img id="iqdl7" src="images/1.png">
-							</div>
-							<div class="gjs-cell" id="icvn8">
-							</div>
-							<div class="gjs-cell" id="i6aen">
-							</div>
-						</div>
-						</div>
-					</div>
-					<div class="gjs-cell" id="id8l">
-						<div class="gjs-cell" id="ir9k3">
-						<img id="ic7es" src="images/1.png"/>
-						<div class="gjs-row" id="ia86v">
-							<div class="gjs-cell" id="iffhh">
-							<img id="iqdl7" src="images/1.png">
-							</div>
-							<div class="gjs-cell" id="icvn8">
-							</div>
-							<div class="gjs-cell" id="i6aen">
-							</div>
-						</div>
-						</div>
-					</div>
-				  </div>
-				</div>
-			  </div>
-		</section>
-			<header class="special container">
+	<!-- blog section -->
+
+	<header class="special container">
 				<span class="icon solid fa-chart-bar"></span>
 					<h2>As this is my <strong>twentieth</strong> freebie for HTML5 UP
 						<br />
@@ -555,7 +536,7 @@
 			<header>
 				<p class="con">CONTACT</p>
 			</header>
-			<form method="post" action="palwanicole.palwa">
+			<form id="contact-form">
 				<label for="subject">Subject:</label><br>
 				<input type="text" id="subject" name="subject" required><br><br>
 		
@@ -570,15 +551,15 @@
 			<br>
 
 			<div class="social-links">
-				<a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a>
-				<a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a>
-				<a href="#" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a>
-				<a href="#" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a>
+				<a href="https://twitter.com/LEdenveronica" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a>
+				<a href="https://www.facebook.com/eden.v.lucero" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a>
+				<a href="https://instagram.com/ni3cagurl?igshid=MjEwN2IyYWYwYw==" class="icon brands circle fa-instagram"><span class="label">Instagram</span></a>
+				<a href="https://www.linkedin.com/in/luceroedenveronica" class="icon brands circle fa-linkedin"><span class="label">LinkedIn</span></a>
 			</div>
 
 			<center>
 				<br>
-				<a data-auto-recognition="true" href="mailto:edenveronicalucero@gmail.com"  target="_blank" class="icon brand">edenveronicalucero@gmail.com</a>
+				<a data-auto-recognition="true" href="mailto:lucero.edenveronica@gmail.com"  target="_blank" class="icon brand">lucero.edenveronica@gmail.com</a>
 			</center>
 
 		</section>
@@ -632,6 +613,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 	<script>
 	  $(document).ready(function() {
@@ -702,41 +685,28 @@
 	});
 </script>
 
-<script>
-   const constraints = {
-       name: {
-           presence: { allowEmpty: false }
-       },
-       email: {
-           presence: { allowEmpty: false },
-           email: true
-       },
-       message: {
-           presence: { allowEmpty: false }
-       }
-   };
 
-   const form = document.getElementById('contact-form');
-
-   form.addEventListener('submit', function (event) {
-     const formValues = {
-         name: form.elements.name.value,
-         email: form.elements.email.value,
-         message: form.elements.message.value
-     };
-
-     const errors = validate(formValues, constraints);
-
-     if (errors) {
-       event.preventDefault();
-       const errorMessage = Object
-           .values(errors)
-           .map(function (fieldValues) { return fieldValues.join(', ')})
-           .join("\n");
-
-       alert(errorMessage);
-     }
-   }, false);
+<script type="text/javascript">
+	(function() {
+		// https://dashboard.emailjs.com/admin/account
+		emailjs.init('YOUR_PUBLIC_KEY');
+	})();
+</script>
+<script type="text/javascript">
+	window.onload = function() {
+		document.getElementById('contact-form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			// generate a five digit number for the contact_number variable
+			this.contact_number.value = Math.random() * 100000 | 0;
+			// these IDs from the previous steps
+			emailjs.send("service_s26lmav","template_uaxhnqo", this);
+				.then(function() {
+					console.log('SUCCESS!');
+				}, function(error) {
+					console.log('FAILED...', error);
+				});
+		});
+	}
 </script>
 
 </body>
